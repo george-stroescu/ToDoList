@@ -1,0 +1,38 @@
+<div class="flex-container">
+  <div>
+    <button class="main-button" (click)="openChildComponent()">Add to List</button>
+  </div>
+
+  <div class="whatever">
+
+    <div *ngIf="shouldOpen">
+      <label>Add a new item to the list: <br>
+        <input class="terminal" #itemDescription /><br>
+      </label>
+      <button (click)="cancel()">Cancel</button>
+      <button (click)="add(itemDescription.value); itemDescription.value=''">Add</button>
+    </div>
+
+    <div *ngIf="isSelected">
+
+      <div>
+        <label>Description: <br>
+          <input class="terminal" [(ngModel)]="selectedItem.description" placeholder="Description"/><br>
+        </label>
+      </div>
+      <button (click)="cancel()">Cancel</button>
+      <button (click)="save()">Save</button>
+
+    </div>
+
+  </div>
+
+  <div>
+    <ul class="items">
+      <li class="items-list" *ngFor="let item of items" [class.selected]="item === selectedItem" (click)="onSelect(item)">
+       <div class="list-content">{{item.description}}</div>
+       <button title="Delete item" (click)="delete(item)">X</button>
+      </li>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,72 @@
+.flex-container .main-button {
+  border-radius: 4px;
+  background-color: #fafafa;
+  min-width: fit-content;
+  min-height: fit-content;
+  height: 40px;
+  width: 100px;
+}
+
+.flex-container button {
+  border-radius: 4px;
+  background-color: #fafafa;
+  min-width: fit-content;
+  min-height: fit-content;
+  margin-right: 3px;
+  height: auto;
+  width: auto;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-container .terminal {
+  width: 100%;
+  min-width: 200px;
+  max-width: 600px;
+  border-radius: 6px;
+  padding-top: 3px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  overflow: hidden;
+  background-color: rgb(15, 15, 16);
+}
+
+.flex-container ul {
+  padding: 0;
+}
+
+.items-list {
+  text-align: center;
+  background-color: #fafafa;
+  height: 16px;
+  width: auto;
+  margin: 0 8px 8px;
+  padding: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+  line-height: 24px;
+  max-width: 800px;
+  overflow: auto;
+}
+
+.items-content {
+  max-width: 800px;
+  width: auto;
+  border-radius: 4px;
+  border: 1px solid #eee;
+}
+
+.delete {
+  position: absolute;
+  margin-left: 890px;
+  background-color: gray !important;
+  color: white;
+}
